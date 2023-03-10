@@ -20,7 +20,7 @@ def situation():
 
 def diagnosing(diagnosis, diagnosis_attempt):
     attempt = openai.Completion.create(engine="text-davinci-003", prompt=(
-        "Can you tell me if these 2 patient diagnoses match? Answer in 'True' or 'False'.\n1. " + diagnosis + "\n2. " + diagnosis_attempt))
+        "Can you tell me if these 2 patient diagnoses match? Answer in 'True' or 'False'.\n1. " + diagnosis + "\n2. " + diagnosis_attempt), max_tokens=4)
     if "True" in attempt.choices[0].text:
         return "True"
     elif "False" in attempt.choices[0].text:
