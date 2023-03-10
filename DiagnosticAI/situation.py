@@ -6,7 +6,7 @@ openai.api_key = API_KEY
 
 def situation():
     sit = openai.Completion.create(
-        engine="text-davinci-003", prompt="I playing a complex game where I do diagnostic medicine, give me a description of a patient to diagnose, and give me a short diagnosis. Format it as such... Patient Symptoms: patient symptoms listed here / Patient Diagnosis: the diagnosis of the patient is said here", max_tokens=1000)
+        engine="text-davinci-003", prompt="I playing a complex game where I do diagnostic medicine, give me a description of a patient to diagnose, and give me a short diagnosis. Format it as such... Patient Symptoms: patient symptoms listed here / Patient Diagnosis: the diagnosis of the patient is said here", max_tokens=1500)
     symptoms = ""
     diagnosis = ""
     for data in sit.choices[0].text.split("/"):
@@ -24,9 +24,4 @@ def diagnosing(diagnosis, diagnosis_attempt):
     if "True" in attempt.choices[0].text:
         return "True"
     elif "False" in attempt.choices[0].text:
-        return "False..." + diagnosis
-
-
-if __name__ == "__main__":
-    symptoms, diagnosis = situation()
-    print(diagnosing(diagnosis, "The patient has a broken leg."))
+        return "False..." + diagnosis_attempt
