@@ -49,11 +49,14 @@
             class="material-symbols-outlined text-light no-button"
             type="submit"
             value="refresh"
+            id="refresh"
           >
             refresh
           </button>
         </form>
-        <a class="navbar-brand text-light" href="#"> Diagnostic AI </a>
+        <a class="navbar-brand text-light" href="#" id="title">
+          Diagnostic AI
+        </a>
         <a href="" class="text-light">AR</a>
       </div>
     </nav>
@@ -111,9 +114,7 @@
       </div>
     </div>
 
-    <!-- MDB -->
-    <script type="text/javascript" src="js/mdb.min.js"></script>
     <!-- Custom scripts -->
-    <script type="text/javascript"></script>
+    <script src="{{url_for('static', filename='app.js')}}"></script>
   </body>
 </html>
