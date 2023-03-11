@@ -44,3 +44,8 @@
 .large-icon {
   font-size: 25px;
 }
+
+.no-button {
+  border: 1px solid transparent;
+  background-color: #ffa6c1;
+}
