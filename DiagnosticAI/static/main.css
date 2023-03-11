@@ -49,3 +49,7 @@
   border: 1px solid transparent;
   background-color: #ffa6c1;
 }
+
+.hidden {
+  display: none;
+}
