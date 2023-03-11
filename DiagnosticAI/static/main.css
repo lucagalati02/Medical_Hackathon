@@ -1,0 +1,46 @@
+.bottom-search {
+  height: 90vh;
+}
+
+.search-button {
+  display: inline;
+}
+
+.search-input:not(:placeholder-shown) .search-button {
+  display: inline;
+}
+
+.no-shadow {
+  box-shadow: none;
+}
+
+.filter {
+  filter: invert(99%) sepia(1%) saturate(0%) hue-rotate(344deg) brightness(107%)
+    contrast(100%);
+  z-index: 1000;
+  position: absolute;
+  top: 50px;
+}
+
+.bg-color {
+  background-color: #ffa6c1;
+}
+
+.image {
+  display: inline;
+  width: 20px;
+  height: 20px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+  font-size: 20px;
+}
+
+.small-icon {
+  font-size: 15px;
+}
+
+.large-icon {
+  font-size: 25px;
+}
